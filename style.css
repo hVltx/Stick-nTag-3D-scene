@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+/* <head>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        body {
+            cursor: url('assets/smartphone-pointer.png') 16 16, pointer;
+        }
+    </style>
+</head> */

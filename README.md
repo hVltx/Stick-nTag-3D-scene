@@ -104,17 +104,3 @@ stickntag-demo/
 └── README.md        # Documentation du projet
 ```
 
----
-
-## 🤝 Contribuer
-
-Les contributions sont les bienvenues !  
-Pour contribuer :
-
-1. Forkez le projet.
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-nouvelle-fonctionnalite`).
-3. Effectuez vos modifications et ajoutez des commits (`git commit -m "Ajout d'une nouvelle fonctionnalité"`).
-4. Poussez la branche (`git push origin feature/ma-nouvelle-fonctionnalite`).
-5. Ouvrez une Pull Request.
-
-Merci pour votre aide ! ❤️

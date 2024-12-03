@@ -57,16 +57,16 @@ const raycaster = new Raycaster();
 const mouse = new Vector2();
 
 const clickableObjects = [
-    { object: null, image: '/support/image/Agenda.png' },
-    { object: null, image: '/support/image/Airplane.png' },
-    { object: null, image: '/support/image/Weather.png' },
-    { object: null, image: '/support/image/Spotify.png' }
+    { object: null, image: 'support/image/Agenda.png' },
+    { object: null, image: 'support/image/Airplane.png' },
+    { object: null, image: 'support/image/Weather.png' },
+    { object: null, image: 'support/image/Spotify.png' }
 ];
 
 // floor + MURS + PLAFOND
 // floor
 const geometry_floor = new THREE.BoxGeometry( 20, 1, 40 );
-const texture = new THREE.TextureLoader().load( "/support/floor.jpeg" );
+const texture = new THREE.TextureLoader().load( "support/floor.jpeg" );
 const material = new THREE.MeshBasicMaterial( {
   color: 0xffffff,
   map: texture
@@ -88,7 +88,7 @@ floor3.position.set(40,-0.5,15.5);
 scene.add( floor3 );
 // MURS
 const geometry_backWall = new THREE.BoxGeometry( 50, 1, 30.5 );
-const texture_backWall = new THREE.TextureLoader().load( "/support/ppp_stripes.jpg" );
+const texture_backWall = new THREE.TextureLoader().load( "support/ppp_stripes.jpg" );
 const material_backWall = new THREE.MeshBasicMaterial( {
   color: 0xffffff,
   map: texture_backWall
@@ -99,7 +99,7 @@ backWall.rotation.x = - Math.PI / 2;
 scene.add( backWall );
 
 const geometry_backWall1 = new THREE.BoxGeometry( 50, 1, 30.5 );
-const texture_backWall1 = new THREE.TextureLoader().load( "/support/ppp_stripes.jpg" );
+const texture_backWall1 = new THREE.TextureLoader().load( "support/ppp_stripes.jpg" );
 const material_backWall1 = new THREE.MeshBasicMaterial( {
   color: 0xffffff,
   map: texture_backWall1
@@ -111,7 +111,7 @@ scene.add( backWall1 );
 
 // PORTE
 const geometry_door = new THREE.BoxGeometry( 12, 1, 25 );
-const texture_door = new THREE.TextureLoader().load( "/support/door.jpg" );
+const texture_door = new THREE.TextureLoader().load( "support/door.jpg" );
 const material_door = new THREE.MeshBasicMaterial( {
   color: 0xffffff,
   map: texture_door
@@ -132,7 +132,7 @@ scene.add( ceiling );
 
 //BED
 const loader = new GLTFLoader();
-loader.load('/support/bed.glb', (gltf) => {
+loader.load('support/bed.glb', (gltf) => {
     const bed = gltf.scene;
     bed.scale.set(11, 7, 8);
     bed.position.set(-40, 0, 10); 
@@ -141,7 +141,7 @@ loader.load('/support/bed.glb', (gltf) => {
 });
 
 //NIGHTSTAND
-loader.load('/support/nightstand.glb', (gltf) => {
+loader.load('support/nightstand.glb', (gltf) => {
     const nightstand = gltf.scene;
     nightstand.scale.set(11, 7, 8);
     nightstand.position.set(-25, 0, 0); 
@@ -149,7 +149,7 @@ loader.load('/support/nightstand.glb', (gltf) => {
     scene.add(nightstand);
 });
 //coffee table
-loader.load('/support/coffee_table.glb', (gltf) => {
+loader.load('support/coffee_table.glb', (gltf) => {
     const coffee_table = gltf.scene;
     coffee_table.scale.set(10, 10, 10);
     coffee_table.position.set(27, 0, 25); 
@@ -158,7 +158,7 @@ loader.load('/support/coffee_table.glb', (gltf) => {
 })
 
 //SOFA
-loader.load('/support/sofa.glb', (gltf) => {
+loader.load('support/sofa.glb', (gltf) => {
     const sofa = gltf.scene;
     sofa.scale.set(1, 1, 1);
     sofa.position.set(40, 0, 20); 
@@ -166,7 +166,7 @@ loader.load('/support/sofa.glb', (gltf) => {
     scene.add(sofa);
 });
 //desk
-loader.load('/support/desk.glb', (gltf) => {
+loader.load('support/desk.glb', (gltf) => {
     const desk = gltf.scene;
     desk.scale.set(9, 9, 9);
     desk.position.set(0, 0, 2); 
@@ -174,7 +174,7 @@ loader.load('/support/desk.glb', (gltf) => {
     scene.add(desk);
 })
 //Stick nTag
-loader.load('/support/stickntag.gltf', (gltf) => {
+loader.load('support/stickntag.gltf', (gltf) => {
     const stickntag1 = gltf.scene;
     const blueMaterial = new MeshBasicMaterial({ color: 0xfffff0 });
     stickntag1.traverse((child) => {
@@ -221,7 +221,7 @@ loader.load('/support/stickntag.gltf', (gltf) => {
     // Définir l'objet comme cliquable
     clickableObjects[0].object = halo;
 })
-loader.load('/support/stickntag.gltf', (gltf) => {
+loader.load('support/stickntag.gltf', (gltf) => {
     const stickntag2 = gltf.scene;
     const blueMaterial = new MeshBasicMaterial({ color: 0x98ff98 });
     stickntag2.traverse((child) => {
@@ -268,7 +268,7 @@ loader.load('/support/stickntag.gltf', (gltf) => {
     // Définir l'objet comme cliquable
     clickableObjects[1].object = halo;    
 })
-loader.load('/support/stickntag.gltf', (gltf) => {
+loader.load('support/stickntag.gltf', (gltf) => {
     const stickntag3 = gltf.scene;
     const blueMaterial = new MeshBasicMaterial({ color: 0xff80ab });
     stickntag3.traverse((child) => {
@@ -314,7 +314,7 @@ loader.load('/support/stickntag.gltf', (gltf) => {
     // Définir l'objet comme cliquable
     clickableObjects[2].object = halo;
 })
-loader.load('/support/stickntag.gltf', (gltf) => {
+loader.load('support/stickntag.gltf', (gltf) => {
     const stickntag4 = gltf.scene;
     const blueMaterial = new MeshBasicMaterial({ color: 0x87ceeb });
     stickntag4.traverse((child) => {
